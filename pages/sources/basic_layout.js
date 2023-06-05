@@ -22,13 +22,56 @@ const mainBody = {
           cols: [
             {
               view: "button",
-              value: "Button A",
+              value: "Submit",
               width: 100,
             },
             {
               view: "button",
-              value: "Button B",
+              value: "Cancel",
               width: 100,
+            },
+          ],
+        },
+      ],
+    },
+    // Grid layout
+    {
+      id: "dynamic_layout",
+      height: 500,
+      type: "space",
+      cols: [
+        { template: "chart area", view: "template" },
+        {
+          gravity: 0.3,
+          rows: [
+            { view: "label", label: "Toggle" },
+            {
+              template: "layout navigation",
+              view: "gridlayout",
+              gridColumns: 2,
+              gridRows: 1,
+              cellHeight: 100,
+              cells: [
+                {
+                  id: "a",
+                  view: "button",
+                  value: "Layout 01",
+                  css: "webix_primary",
+                  x: 0,
+                  y: 0,
+                  dx: 1,
+                  dy: 1,
+                },
+                {
+                  id: "b",
+                  view: "button",
+                  value: "Layout 02",
+                  x: 1,
+                  y: 0,
+                  dx: 1,
+                  dy: 1,
+                },
+              ],
             },
           ],
         },
